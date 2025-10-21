@@ -1,0 +1,76 @@
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Center Container with Gradient Background */
+.app-container {
+  @apply flex items-center justify-center min-h-screen;
+  background: linear-gradient(135deg, #1e3a8a, #9333ea);
+}
+
+/* Glassy Card Styling */
+.card {
+  @apply w-full max-w-md rounded-3xl p-6 border border-white/20 shadow-2xl backdrop-blur-md;
+  background: rgba(32, 32, 32, 0.6); /* Semi-transparent dark glass */
+  color: #fbbf24; /* Tailwind orange-400 for text */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Title */
+.title {
+  @apply text-center text-2xl font-bold text-white mb-6;
+  letter-spacing: 0.5px;
+}
+
+/* Input Group */
+.input-group {
+  @apply flex rounded-xl overflow-hidden mb-6;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.input-group input {
+  @apply outline-none w-full py-2 px-4 text-orange-400 placeholder-gray-300 bg-transparent;
+  font-size: 1rem;
+}
+
+.input-group button {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 transition-all rounded-r-xl;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Options Section */
+.options {
+  @apply flex flex-col gap-4 text-sm;
+}
+
+.range {
+  @apply flex items-center gap-x-3;
+}
+
+.range input[type="range"] {
+  @apply cursor-pointer w-full accent-blue-400;
+}
+
+.checkbox-group {
+  @apply flex items-center justify-between text-white;
+}
+
+.checkbox-group label {
+  @apply flex items-center gap-x-2 cursor-pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  @apply accent-blue-500 w-5 h-5;
+}
+
+/* Optional: Add hover effect on card */
+.card:hover {
+  background: rgba(32, 32, 32, 0.75);
+  transition: all 0.3s ease-in-out;
+}

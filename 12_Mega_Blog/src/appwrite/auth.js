@@ -40,6 +40,7 @@ export class AuthService{
         }
     }
 
+    // Method, to check weather a user has logged in or not
     async getCurrentUser(){
         try {
             return await this.account.get();

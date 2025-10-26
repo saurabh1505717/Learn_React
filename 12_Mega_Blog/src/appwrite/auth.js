@@ -1,4 +1,4 @@
-import config from "../config/config";
+import conf from "../conf/conf";
 import { Client, Account, ID } from 'appwrite';
 
 export class AuthService{
@@ -9,8 +9,8 @@ export class AuthService{
     // Now, if we have to change backend service, currently using appwrite, for example need to change to firebase or something, then just need to chnge this constructor function, 'createAccount()' method will remain same as in that we are taking same inputs which are required;
     constructor(){
         this.client
-            .setEndpoint(config.appwriteUrl)
-            .setProject(config.appwriteProjectId);
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);
     }
 
